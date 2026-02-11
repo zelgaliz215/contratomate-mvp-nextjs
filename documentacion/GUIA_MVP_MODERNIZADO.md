@@ -9,7 +9,7 @@ Esta es tu guía paso a paso para construir el MVP. Sigue cada fase en orden.
 ### 1. Crear el Proyecto
 
 ```bash
-npx create-next-app@latest contratomate-moderno
+pnpx create-next-app@latest contratomate-moderno
 # Responde:
 # TypeScript: Yes
 # ESLint: Yes
@@ -24,15 +24,15 @@ npx create-next-app@latest contratomate-moderno
 ```bash
 cd contratomate-moderno
 # Instalar Shadcn/UI y componentes base
-npx shadcn@latest init
-npx shadcn@latest add button input card table dialog form sheet dropdown-menu toast
+pnpx shadcn@latest init
+pnpx shadcn@latest add button input card table dialog form sheet dropdown-menu toast
 
 # Instalar Prisma y Cliente
-npm install prisma --save-dev
-npm install @prisma/client
+pnpm add -D prisma
+pnpm add @prisma/client
 
 # Inicializar Prisma
-npx prisma init
+pnpx prisma init
 ```
 
 ### 3. Configurar Supabase (Postgres)
@@ -153,7 +153,7 @@ model Contract {
 ### 5. Sincronizar con DB
 
 ```bash
-npx prisma migrate dev --name init
+pnpx prisma migrate dev --name init
 ```
 
 ---
@@ -163,7 +163,7 @@ npx prisma migrate dev --name init
 ### 1. Instalar Better Auth
 
 ```bash
-npm install better-auth
+pnpm add better-auth
 ```
 
 ### 2. Configurar Cliente (`lib/auth.ts`)
